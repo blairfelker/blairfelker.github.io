@@ -10,7 +10,7 @@
         </div>
         <br>
         <div class="info2">
-            <p>shut up gabby</p>
+            <p>Insert your sudoku puzzle here.</p>
             <table>
                 <tbody>
                     <tr>
@@ -116,17 +116,16 @@
             </table>
             <br>
             <button class="test" onclick="solve()">Solve</button>
-            <button class="test" onclick="changeLayout()">Change Layout</button>
+            <button disabled class="test" onclick="changeLayout()">Change Layout</button>
         </div>
         <script>
-            for (i; i<document.getElementsByTagName("td").length; i++) {
-                
-            }
             function solve() {
-
-            }
-            function changeLayout() {
-                
+                let cells = document.getElementsByTagName("input");
+                let puzzle = [[],[],[],[],[],[],[],[],[]]
+                for (i=0; i<cells.length; i++) {
+                    let v = cells[i].id
+                    puzzle[v[1]-1][v[2]-1] = cells[i].value
+                }
             }
         </script>
     </body>
