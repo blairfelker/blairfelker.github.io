@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Blair Felker's Website</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+            <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name" style="width: auto; max-height: 100px;">
+            <h2>Acid Trip</h2>
+        </div>
+        <br>
+        <div class="info2">
+            <p>My image deepfrier/cooker/fuck-uper.</p>
+            <p>This is a fraction of what it can do.</p>
+            <button id="cpic" class="collapse" onclick="changePic()">deepfry</button>
+            <img id="pic" style="width: 100%;" src="media/acidtrip/spunchbop.webp">
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Download</h3>
+            <p>To use this, make sure you have python, cv2, and flask installed on your computer.</p>
+            <p>Run with python3 acidtrip.py in your command line and go to the link provided by the server.</p>
+            <p>To use a new image, place it into the input folder and select it in the application.</p>
+            <a href="files/Acid Trip.zip"><button>python application</button></a>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Usage Tips</h3>
+            <p>A higher amount takes longer, as well as the size of the image.</p>
+            <p>If you are impatient, reduce the size of the image.</p>
+            <p>The static output folder has a cache of sorts.</p>
+            <p>If you want to build up a cache of a single image, using the multiple option will help with that.</p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Backstory</h3>
+            <p>One day, I decided to work on my computer vision project that was due.</p>
+            <p>The first part of the project involved writing a convolution function instead of the one provided by cv2.</p>
+            <p>On my first test, I had forgotten to multiply the value in the matrix to the pixel, which blew up the image.</p>
+            <p>I liked the result so much I made an application out of it.</p>
+        </div>
+    <script>
+        let drake = 1
+        function changePic() {
+            let d = document.getElementById("pic")
+            let c = document.getElementById("cpic")
+            if (drake) {
+                d.src = "media/acidtrip/spunchbop on acid3.png"
+                c.innerHTML = "un-deepfry"
+                drake = 0
+            }
+            else {
+                d.src = "media/acidtrip/spunchbop.webp"
+                c.innerHTML = "deepfry"
+                drake = 1
+            }
+        }
+    </script>
+    </body>
+</html>

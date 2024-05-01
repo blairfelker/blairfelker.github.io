@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name">
+            <h2>Blair Felker's Personal Website</h2>
+            <img class="me" id="me" src="media/me/1.png" onclick="me()">
+            <div class="sub" id="sub">
+                <!-- <p>Hi my name is Blair Felker. I'm 23 years old. I am very similar to you. Did I mention to you that I'm dead? A few years ago a group of girls pushed me down a sewer hole to try and embarrass me. When I didn't come back up the police came.The girl said that I had fell and everyone believed them. The police found my body in the sewer. I had a broken neck and my face was torn off. Send this message to 15 people after you listened the whole message if you value your life. A boy called David received this message. He just left and deleted it. When he was in the shower he heard laughing. My laughter. He got really scared and rushed to his phone to repost this message but he was too late. The next morning his mom entered his bedroom and all she found was a message written in his blood saying 'You will never have him back'. No one has found his body yet because he is with me. A girl called Charlotte received this message and she immediately sent it to 25 people, 10 more than required. I still watch over every second of her life to make sure that she is safe and to keep her and everyone close to her out of danger. Send this to 15 people in the next five minutes if you don't want your fate to be the same as David's. Your time starts now.the story is true you can research it on Google.</p> -->
+                <p>Hi! I'm Blair. That's me on the left.</p>
+                <p>Born and raised in southern Delaware, I went to Univeristy of Delaware for my Bachelors Degree in Computer Science.</p>
+                <p>Though I studied Artificial Intelligence in college, I much prefer searching for a solution using an algorithm rather than using neural networks.</p>
+                <p>I enjoy helping others learn Computer Science, whether its the basics, data structures, or search algorithms.</p>
+                <p>My favorite programming languages are Python and <span style="white-space: nowrap;">C++.</span></p>
+                <p>You can contact me through my email at <a href="mailto:blairfelker@gmail.com">blairfelker@gmail.com</a> for any questions.</p>
+                <a href="https://www.youtube.com/channel/UCJLvbvByfuiudkY0JQoKQxw" target="_blank"><img class="nooutline" style="width: 20px" src="media/socials/youtube.png"></a>
+                <a href="https://steamcommunity.com/id/TheEDS" target="_blank"><img class="nooutline" style="width: 20px" src="media/socials/steam.png"></a>
+                <a href="https://www.speedrun.com/users/blitzashspear"><img class="nooutline" style="width: 20px" src="media/socials/src.png"></a>
+                <a href="https://www.linkedin.com/in/blair-felker-810754250/" target="_blank"><img class="nooutline" style="width: 20px" src="media/socials/linkedin.png"></a>
+            </div>
+            <div class="sub">
+                <p>You can download my resume here.</p>
+                <button onClick="downloadResume()">download resume</button>
+                <button onClick="window.open('https://en.wikipedia.org/wiki/Ozymandias_%28Breaking_Bad%29')">
+                do not click this!</button>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Personal Projects</h3>
+            <p>
+                <button onclick='window.open("8solver.html")'>8-puzzle solver</button> Solve any (solvable) sliding puzzle.
+                <br>
+                <button onclick='window.open("sudoku.html")'>sudoku solvers</button> Solve any 4x4, 6x6, or 9x9 sudoku puzzle.
+                <br>
+                <button onclick='window.open("automata.html")'>automata tester</button> Holy moly I love abstract machines.
+                <br>
+                <button onclick='window.open("acidtrip.html")'>acid trip</button> Deepfry any image beyond repair.
+                <br>
+                <button onclick='window.open("https://devpost.com/software/sound-ificator-inator")'>sound-ificator-inator</button> The Henhacks 2024 hackathon winner for accessibility.
+                <br>
+                <button onclick='window.open("https://github.com/blairfelker")'>...and more</button> Check out my Github to see any projects that are unlisted here.
+            </p>
+        </div>
+        <div class="info">
+            <h3>Affiliations</h3>
+            <a href="https://upsidedownchrisplusthecliguys.bandcamp.com/" target="_blank"><img src="media/sponsors/band.png" class="sponsor"></a>
+            &nbsp;
+            <a href="https://sparclab.work" target="_blank"><img src="media/sponsors/sparc.png" class="sponsor"></a>
+            &nbsp;
+            <a href="https://ctftime.org/team/64660/" target="_blank"><img src="media/sponsors/udctf.png" class="sponsor"></a>
+        </div>
+        <div class="info">
+            <img class="nooutline" style="width: 15%; float:right; margin-top:15px; cursor: pointer;" onclick="tf2crit()" src="media/home/aussie.png">
+            <h3>Hobbies</h3>
+            <p>Click these buttons for information on my hobbies.</p>
+            <button onclick="window.open('pokemon.html')">pokemon</button>
+            <button onclick="window.open('dnd.html')">d&d</button>
+            <!-- <button onclick="window.open('minecraft.html')">minecraft</button> -->
+            <button onclick="window.open('art.html')">art stuff</button>
+            <button onclick="window.open('mtg.html')">mtg</button>
+            <!-- <button onclick="window.open('ssb.html')">super smash bros.</button> -->
+        </div>
+        <div class="info">
+            <h3>Fun Facts</h3>
+            <p>
+                I have a <a href="https://www.youtube.com/watch?v=_csutNtHZPw">video</a> on Youtube that has approximately 4.1 million views.
+                <br>
+                I have a black belt in Taekwondo.
+                <br>
+                I am 5'5".
+                <br>
+                I have traveled to the Dominican Republic and Iceland.
+                <br>
+                I've never broken a bone.
+                <br>
+                My favorite anime series is JoJo's Bizzare Adventure.
+                <br>
+                One of my teeth is fake as hell.
+                <br>
+                I exist in a SoundSmith <a href="https://www.youtube.com/watch?v=nEmAzgAH-gc&list=PLOhzvyjgAq851jrYIdxw7rk5Xen4C2Dg0&t=430s">video</a>.
+            </p>
+        </div>
+    </body>
+    <script>
+        function me() {
+            let me = document.getElementById("me")
+            let rand = Math.ceil(Math.random() * 9)
+            me.src = "media/me/"+(rand)+".png"
+            if (rand == 4) {
+                subs = document.getElementsByClassName("sub")
+                for (i=0; i<subs.length; i++){
+                    subs[i].style.fontFamily = "Comic Sans MS"
+                }
+                document.body.style.fontFamily = "Comic Sans MS"
+            }
+            else {
+                document.body.style.fontFamily = ""
+            }
+        }
+        me()
+        function downloadResume() {
+            var resume = document.createElement('a')
+            resume.href = 'files/Blair Felker Resume web.pdf'
+            resume.download = ''
+            document.body.appendChild(resume)
+            resume.click()
+            resume.body.removeChild(resume);
+        }
+        var crit = new Audio("media/home/crit.mp3")
+        crit.volume = .5
+        function tf2crit() {
+            crit.play()
+        }
+    </script>
+</html>

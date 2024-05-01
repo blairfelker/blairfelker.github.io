@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Blair Felker's Website</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+            <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name" style="width: auto; max-height: 100px;">
+            <h2>Sudoku Solver</h2>
+        </div>
+        <br>
+        <div class="info2">
+            <p>"Solve any sudoku puzzle through brute force and nothing else."</p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Download</h3>
+            <p>To use this, make sure you have python, cv2, and flask installed on your computer.</p>
+            <p>Run with python3 sudoku.py in your command line and go to the link provided by the server.</p>
+            <a href="files/Sudoku.zip"><button>python application</button></a>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Info</h3>
+            <p>This Sudoku Solver can solve 4x4, 6x6, and 9x9 puzzles.</p>
+            <p>Some 9x9 irregular puzzles might fail.</p>
+            <p>I made this for my Artificial Intelligence class when we were learning Constraint Satisfaction Problems.</p>
+            <p>This app also introduced me to Flask, which is what I like to use for GUIs.</p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>The Algorithm</h3>
+            <p>AC-3: Arc Consistency Algorithm #3 is the most common algorithm taught for solving constraint problems.</p>
+            <p><a target="_blank" href="https://en.wikipedia.org/wiki/AC-3_algorithm">Wikipedia Page for AC-3</a></p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>The Heuristic</h3>
+            <p>Minimum Remaining Values: The least amount of values in a cell was selected during each parse of the backtracking.</p>
+        </div>
+    </body>
+</html>

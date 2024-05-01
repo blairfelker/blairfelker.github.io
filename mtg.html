@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name">
+            <h2>Magic The Gathering</h2>
+            <img class="nooutline" style="width: 35%; width: 250px" src="media/mtg/cover.png">
+            <div class="sub">
+                <p>Here is a collection of my Magic the Gathering decks.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Red/Green Aggro</h3>
+            <div class="containter" id="redgreenaggrolist" style="float:left">
+
+            </div>
+            <div class="containter" style="width: 305px; float:right">
+                <img class="nooutline" id="redgreenaggroimage" src="media/mtg/Banefire.png">
+            </div>
+        </div>
+        <div class="info">
+            <h3>Olivia, Crimson Bride Commander</h3>
+            <div class="containter" id="oliviacommanderlist" style="float:left"></div>
+            <div class="containter" style="float:left">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="containter" id="oliviacommanderlist2" style="float:left"></div>
+            <div class="containter" style="width: 305px; float:right">
+                <img class="nooutline" id="oliviacommanderimage" src="media/mtg/Olivia, Crimson Bride.png">
+            </div>
+        </div>
+    </body>
+    <script>
+        function loadRedGreenAggro() {
+            let workingDiv = document.getElementById("redgreenaggrolist")
+            let cardList = ["Banefire",  "Jadelight Ranger",  "Carnage Tyrant",  "Rubblebelt Recluse",  "Pelt Collector",  "Sparkmage Apprentice",  "Pelakka Wurm",  "Elvish Rejuvenator",  "Raptor Hatchling",  "Charging Monstrosaur",  "Draconic Disciple",  "Druid of the Cowl",  "Llanowar Elves",  "Dragonborn Champion",  "Colossal Majesty",  "Shock",  "Lightning Strike",  "Goreclaw, Terror of Qal Sisma",  "Ghalta, Primal Hunger",  "The Tarrasque",  "Vivien Reid",  "Mountain",  "Forest",  "Timber Gorge"]
+            let amountList = [  2,  1,  1,  1,  1,  1,  1,  2,  2,  2,  3,  4,  4,  1,  2,  2,  4,  1,  1,  1,  1,  7,  11,  4]
+            let image = document.getElementById("redgreenaggroimage")
+            for (i=0; i<cardList.length; i++) {
+                let newDiv = document.createElement('div')
+                newDiv.id = cardList[i]
+                newDiv.className = "containter"
+                newDiv.style.cursor = "default"
+                newDiv.style.display = "flex"
+                newDiv.onmouseenter = function() { 
+                    newDiv.style.color = 'white'; 
+                    image.src = "media/mtg/" + newDiv.id + ".png"
+                }
+                newDiv.onmouseleave = function() { newDiv.style.color = 'black'; }
+                if (amountList[i] == 1) {
+                    newDiv.textContent = newDiv.id + "\n"
+                }
+                else {
+                    newDiv.textContent = newDiv.id + " " + amountList[i] + "x\n"
+                }
+                workingDiv.appendChild(newDiv)
+                workingDiv.appendChild(document.createElement('br'))
+            }
+        }
+        function loadOliviaCommander() {
+            let workingDiv = document.getElementById("oliviacommanderlist")
+            let cardList = ["Olivia, Crimson Bride",  "Molten Disaster",  "Earthquake",  "Sign In Blood",  "Read the Bones",  "Faithless Looting",  "Release the Gremlins",  "Cathartic Reunion",  "Feed the Swarm",  "Liquimetal Torque",  "Ebony Fly",  "Mind Stone",  "Charcoal Diamond",  "Mask of Avacyn",  "Fractured Powerstone",  "Everflowing Chalice",  "Rakdos Signet",  "Nevinyrral’s Disk",  "Blood Fountain",  "Prismatic Lens",  "Fire Diamond",  "Guardian Idol",  "Maskwood Nexus",  "Trading Post",  "Undercity Informer",  "Artisan of Kozilek",  "Ulamog’s Crusher",  "Abhorrent Overlord",  "Angrath’s Marauders",  "Corpse Connoisseur",  "Butcher of Malakir",  "Sepulchral Primordial",  "Necropolis Regent",  "Oriq Loremage",  "Terror of Mount Velus",  "Magus of the Wheel",  "Bane of Bala Ged",  "Dragon Mage",  "Overseer of the Damned",  "Vile Entomber",  "Rakshasa Debaser",  "Harvester of Souls",  "Flayer of the Hatebound",  "Charging Tuskodon",  "Goblin Bombardment",  "Magmaquake",  "Rakdos Charm",  "Moonlight Bargain",  "Wail of the Nim",  "Dark Bargain",  "Undying Malice",  "Feign Death",  "Ruin Grinder",  "Triplicate Titan",  "Combustible Gearhulk",  "Steel Hellkite",  "Gravebreaker Lamia",  "Kaervek the Merciless",  "Zagras, Thief of Heartbeats",  "Go-Shintai of Hidden Cruelty",  "Sengir, the Dark Baron",  "Florian, Voldaren Scion",  "Kazarov, Sengir Pureblood",  "Etali, Primal Storm",  "Geier Reach Sanitarium",  "Myriad Landscape",  "Ash Barrens",  "Command Tower",  "Exotic Orchard",  "High Market",  "Foreboding Ruins",  "Rakdos Carnarium",  "Akoum Refuge",  "Cinder Barrens",  "Rakdos Guildgate",  "Shadowblood Ridge",  "Bloodfell Caves",  "Temple of Malice",  "Swamp",  "Mountain"]
+            let amountList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16, 6]
+            let image = document.getElementById("oliviacommanderimage")
+            for (i=0; i<cardList.length; i++) {
+                if (i<cardList.length/2) {
+                    workingDiv = document.getElementById("oliviacommanderlist")
+                }
+                else {
+                    workingDiv = document.getElementById("oliviacommanderlist2")
+                }
+                let newDiv = document.createElement('div')
+                newDiv.id = cardList[i]
+                newDiv.className = "containter"
+                newDiv.style.cursor = "default"
+                newDiv.style.display = "flex"
+                newDiv.onmouseenter = function() { 
+                    newDiv.style.color = 'white'; 
+                    image.src = "media/mtg/" + newDiv.id + ".png"
+                }
+                newDiv.onmouseleave = function() { newDiv.style.color = 'black'; }
+                if (amountList[i] == 1) {
+                    newDiv.textContent = newDiv.id + "\n"
+                }
+                else {
+                    newDiv.textContent = newDiv.id + " " + amountList[i] + "x\n"
+                }
+                workingDiv.appendChild(newDiv)
+                workingDiv.appendChild(document.createElement('br'))
+            }
+        }
+        function loadDeck(workingDiv, cardList, amountList, image) {
+            for (i=0; i<cardList.length; i++) {
+                let newDiv = document.createElement('div')
+                newDiv.id = cardList[i]
+                newDiv.className = "containter"
+                newDiv.style.cursor = "default"
+                newDiv.style.display = "flex"
+                newDiv.onmouseenter = function() { 
+                    newDiv.style.color = 'white'; 
+                    image.src = "media/mtg/" + newDiv.id + ".png"
+                }
+                newDiv.onmouseleave = function() { newDiv.style.color = 'black'; }
+                if (amountList[i] == 1) {
+                    newDiv.textContent = newDiv.id + "\n"
+                }
+                else {
+                    newDiv.textContent = newDiv.id + " " + amountList[i] + "x\n"
+                }
+                workingDiv.appendChild(newDiv)
+                workingDiv.appendChild(document.createElement('br'))
+            }
+        }
+        function collapseRedGreenAggro() {
+
+        }
+        loadRedGreenAggro()
+        loadOliviaCommander()
+    </script>
+</html>

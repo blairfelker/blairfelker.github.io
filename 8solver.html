@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name" style="width: auto; max-height: 100px;">
+            <h2>8-puzzle solver</h2>
+        </div>
+        <br>
+        <div class="info2">
+            <p>Type in your inputs into the puzzle and download the program to use the solver.</p>
+            <table id="start">
+                <tbody>
+                    <tr>
+                        <td><input type="number" size=1 min=1 max="8" id="C11" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C12" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C13" oninput="validity.valid||(value='');"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" size=1 min=1 max="8" id="C21" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C22" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C23" oninput="validity.valid||(value='');"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" size=1 min=1 max="8" id="C31" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C32" oninput="validity.valid||(value='');"></td>
+                        <td><input type="number" size=1 min=1 max="8" id="C33" oninput="validity.valid||(value='');"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <p style="float: left; margin-right: 20px; margin-top: 3px; margin-bottom: 20px; font-size: large;">→<br><br><br<br><br><br><br><br><br><br>→</p> -->
+            <table id="goal" style="margin-bottom: 60px; ">
+                <tbody>
+                    <tr>
+                        <td><input size=1 value=1 disabled></td>
+                        <td><input size=1 value=2 disabled></td>
+                        <td><input size=1 value=3 disabled></td>
+                    </tr>
+                    <tr>
+                        <td><input size=1 value=4 disabled></td>
+                        <td><input size=1 value=5 disabled></td>
+                        <td><input size=1 value=6 disabled></td>
+                    </tr>
+                    <tr>
+                        <td><input size=1 value=7 disabled></td>
+                        <td><input size=1 value=8 disabled></td>
+                        <td><input size=1 disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="info" style="position: absolute; bottom: 2%; right:2%; width:auto; margin-left: 5px; padding-top: 1%;">
+                <select id="algo" onChange="checkAlgo()">
+                    <option value="-">Select Algorithm:</option>
+                    <option value="0">Iterative Deepening</option>
+                    <option value="1">Breadth-First Search</option>
+                    <option value="2">A-Star</option>
+                </select>
+                <select id="heuristic" style="display: none">
+                    <option value="0">Select Heuristic:</option>
+                    <option value="1">Misplaced Tiles</option>
+                    <option value="2">Manhattan Distance</option>
+                    <option value="3">Pure Random</option>
+                    <option value="4">MADAMMIT</option>
+                    <option value="5">Controlled Random</option>
+                    <option value="6" disabled>Linear Conflict</option>
+                </select>
+                <button onclick="solve()">generate</button>
+            </div>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Download</h3>
+            <p>To use this, either download the Unix executable, or the source code and compile it with make all.</p>
+            <p>Make sure CMake is installed first if you compile it yourself.</p>
+            <p>Then, paste the generated string. It will automatically be copied onto your clipboard when you click generate.</p>
+            <a href="files/8-PuzzleC++.zip"><button>unix executable</button></a>
+            <a href="files/SearchC++.zip"><button>source code</button></a>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Algorithms</h3>
+            <p>Iterative Deepening: Traverses all of the children of the puzzle, going from depth 0 to 31. This takes a while.</p>
+            <p>Breadth-First Search: Traverses through the entire puzzle in a First-In, First-Out queue.</p>
+            <p>A-Star: Uses a priority queue to traverse the puzzle. The priority is defined by the selected heuristic.</p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Actual Heuristics</h3>
+            <p>Misplaced Tiles: The amount of tiles that are different from the goal.</p>
+            <p>Manhattan Distance: The minimum amount of moves it takes each square to get to the goal.</p>
+            <p>Linear Conflict: Returns the amount of tiles that are in the goal row/column, but in each other's way (not implemented).</p>
+        </div>
+        <br>
+        <div class="info2">
+            <h3>Funny Heuristics</h3>
+            <p>Pure Random (aka Artificial Stupidity): Chooses a completely random number. This will lead to wacky results, but its fun.</p>
+            <p>MADAMMIT: <b>MA</b>nhattan <b>D</b>istance <b>M</b>inus <b>MI</b>splaced <b>T</b>iles</p>
+            <p>Controlled Random: Chooses a random number, but the upper bound is controlled by the amount of misplaced tiles.</p>
+        </div>
+        <script>
+            function checkAlgo() {
+                algo = document.getElementById("algo")
+                heur = document.getElementById("heuristic")
+                if (algo.value == "2") {
+                    heur.style.display = ""
+                }
+                else {
+                    heur.style.display = "none"
+                }
+            }
+            function solve() {
+                let puzzle = []
+                let goal = ["1", "2", "3", "4", "5", "6", "7", "8", "0"]
+                let algo = document.getElementById("algo").value
+                if (algo == '-') {
+                    window.alert("Select the algorithm.")
+                    return
+                }
+                for (i=1; i<=3; i++) {
+                    for (j=1; j<=3; j++) {
+                        puzzle.push(document.getElementById("C"+i+j))
+                    }
+                }
+                puzzle = puzzle.map((e) => e.value ? e.value: "0").join("")
+                let seen = []
+                for (i=0; i<puzzle.length; i++) {
+                    for (j=0; j<seen.length; j++) {
+                        if (puzzle[i] == seen[j]) {
+                            return
+                        }
+                    }
+                    seen.push(puzzle[i])
+                }
+                console.log(puzzle + goal.join("") + algo + (algo == "2" ? document.getElementById("heuristic").value : ""))
+                navigator.clipboard.writeText(puzzle + goal.join("") + algo + (algo == "2" ? document.getElementById("heuristic").value : ""))
+            }
+        </script>
+    </body>
+</html>

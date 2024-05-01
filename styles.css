@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Mario Kart DS';
+    src: url(font/Mario-Kart-DS.ttf);
+}
+@font-face {
+    font-family: 'TF2 Build';
+    src: url(font/tf2build.ttf);
+}
+html {
+    overscroll-behavior: none;
+    text-align: center;
+}
+body {
+    background: linear-gradient(180deg, #7699a1, #0c3141);
+}
+img {
+    width: 100%;
+    box-shadow: 0px 0px 5px 5px black;
+}
+button {
+    font-size: large;
+    font-family: 'Mario Kart DS';
+    cursor: pointer;
+    color:#000000;
+    margin-bottom: 1px;
+    
+}
+button:disabled {
+    cursor: default;
+}
+h2 {
+    color: #00008b;
+}
+.me {
+    min-width: 300px;
+    max-width: 555px;
+    width: 50%;
+    float: left;
+    border-radius: 20px;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.sponsor {
+    width:auto;
+    box-shadow: 0px 0px 3px 3px black;
+    border-radius: 20px;
+}
+div {
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: inline-block;
+    background-color: #a8d7e5;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    width: 70%;
+    box-shadow: 5px 5px 10px #000000;
+    object-fit: contain;
+    position: relative;
+}
+.name {
+    font-size: xx-large;
+    font-family: 'TF2 Build';
+}
+.info {
+    text-align: left;
+    font-size: large;
+    padding-bottom: 1%;
+}
+.sub {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    text-align: left;
+    font-size: large;
+    width: 40%;
+    min-width: 250px;
+    float:inline-end;
+    font-family: '';
+}
+.art180 {
+    width: 95%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.containter {
+    all: initial;
+    font-size: inherit;
+    float: inherit;
+}
+.collapse {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.collapse2 {
+    position: absolute;
+    top: 15px;
+    right: 125px;
+}
+
+input {
+    font-size: 1em;
+}
+input[type=number] {
+    appearance: textfield;
+}
+table {
+    border: 3px solid #000000;
+    border-collapse: collapse;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    float: left;
+    box-shadow: 5px 5px 10px #000000;
+    background-color: #ffffff;
+}
+td {
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 1px solid #000000;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1em;
+}
+tr.box-bottom td {
+    border-bottom: 3px solid #000000;
+}
+
+td.box-side {
+    border-right: 3px solid #000000;
+}
+.info2 {
+    width:auto; 
+    text-align: left;
+    font-size: large;
+    padding-bottom: 1%;
+}
+
+.nooutline {
+    box-shadow: initial;
+}
+.heroforge {
+    float: left;
+    width: 30%;
+    margin-right: 20px;
+    padding-top: 2%;
+}
+a {
+    text-decoration:none;
+    color:blue;
+}
+
+.halloffame {
+    vertical-align: top;
+    min-width: 300px;
+    width: 25%;
+    max-width: 350px;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    cursor: pointer;
+}
+.halloffamedesc {
+    position: absolute;
+    top: 11%;
+    margin-left: 1%;
+    margin-right: 5%;
+}

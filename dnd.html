@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name">
+            <h2>D&D</h2>
+            <img class="nooutline" style="width: 35%; width: 250px" src="media/tabletop/d20-dice-01.webp">
+            <div class="sub">
+                <p>I've played tabletop games for a while now, and I've started to keep track of all of my characters in no particular order.</p>
+                <p>Assume the system I've played these for is D&D 5e, unless stated otherwise.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Xavier</h3>
+            <button class="collapse" id="bc1" onclick="collapseDesc('c1')">show desc.</button>
+            <div class="containter" id="c1" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/xavier.png">
+                </div>
+                <p>Campaign: ???</p>
+                <p>Race: Drow</p>
+                <p>Alignment: Lawful Evil</p>
+                <p>Class: Storm Sorcerer</p>
+                <p>My first character. Xavier lived in the underdark and had ties with the mafia. Being a Storm Sorcerer, he loved to use spells that dealt lightning and thunder damage. He especially loved "Ball Lightning," which was just Fireball, but lightning damage. After meeting the party, he agreed to work with them for a portion of the money. His last stand was in a volcano. After hitting a well-timed lightning bolt on two hags, the hags threw him into the lava below, causing him to perish.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Bane Bloodshot</h3>
+            <button class="collapse" id="bc2" onclick="collapseDesc('c2')">show desc.</button>
+            <div class="containter" id="c2" style="display: none;">
+                <p>Campaign: ???</p>
+                <p>Race: Human</p>
+                <p>Alignment: Chaotic Neutral</p>
+                <p>Class: Bloodhunter</p>
+                <p>Bane Bloodshot was a man in his 50s and replaced Xavier. He came from a wealthy family, but left to pursue the Bloodhunter way. Unfortunately, this campaign was abandoned and Bane never got an ending.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Chance (Cheese) Ethorium</h3>
+            <button class="collapse" id="bc3" onclick="collapseDesc('c3')">show desc.</button>
+            <div class="containter" id="c3" style="display: none;">
+                <div class="heroforge">
+                    <img style="cursor:pointer" src="media/tabletop/chance.png" id="chance" onclick="changeChance()">
+                </div>
+                <p>Campaign: World of Gods and Idols</p>
+                <p>Race: Human -> Tiefling</p>
+                <p>Alignment: Chaotic Neutral</p>
+                <p>Class: Alchemist Artificer</p>
+                <p>Chance was a gun dealer by trade who had an affinity for gourmet cheeses. After one of the Gods, Kryciert, saw him doing these trades, he was turned into a horribly mangled Tiefling. During his adventures with the party, he brewed a potion which allowed him to wish for one thing. He wished to return to a human. Unfortunately, the wish was faulty, and his form became even worse than before. The party inevitably faced against Kryciert, realizing that she cursed a lot more people than just Chance. Kryciert was able to release the curse on everyone else, except for Chance. This was due to the wish he had attempted to grant himself. He left the party, as he he failed.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Al Mite</h3>
+            <button class="collapse" id="bc4" onclick="collapseDesc('c4')">show desc.</button>
+            <div class="containter" id="c4" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/al.png">
+                </div>
+                <p>Campaign: World of Gods and Idols.</p>
+                <p>Race: Half-Elf</p>
+                <p>Alignment: Lawful Evil</p>
+                <p>Class: Twilight Cleric</p>
+                <p>Al Mite came from a poor family and was born into indentured servitude to one of the party members, Concord. As a cleric, he attempts to find the good in anyone. He also seems to be obsessed with forgiveness, even forgiving Concord because he wasn't the one who enslaved him. This obsession also leads him to be a bit of a hypocrite. This hypocrisy was never explored, unfortunately, since the campaign was abandoned.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Hosbin Drawndecks</h3>
+            <button class="collapse" id="bc5" onclick="collapseDesc('c5')">show desc.</button>
+            <div class="containter" id="c5" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/hosbin.png">
+                </div>
+                <p>Campaign: Lizard King</p>
+                <p>Race: Human</p>
+                <p>Alignment: True Neutral</p>
+                <p>Class: Hexblade Warlock/College of Lore Bard</p>
+                <p>After his house burned to the ground, he needed power. What better way to get power than to have a goddess of death grant it to you. Now a servant of the raven queen, he was tasked with finding any remnants of necromancy and bringing them back 6 feet under. After witnessing a group getting annihilated by a Beholder, a new team assembled to take down the Lizard King, who was bringing back soldiers to conquer the world.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Angr Kinjh</h3>
+            <button class="collapse" id="bc6" onclick="collapseDesc('c6')">show desc.</button>
+            <div class="containter" id="c6" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/angr.png">
+                </div>
+                <p>Campaign: Curse of Strahd</p>
+                <p>Race: Half-Orc</p>
+                <p>Alignment: True Neutral</p>
+                <p>Class: Zealot Barbarian</p>
+                <p>From a mountain range north of Daggorford, his family if of warriors. After besting his brother to receive the family heirloom, The Greataxe of the Kinjh, he set off to "beat up some motherfuckers." Angr was eventually hired to kill werewolves in Barovia. After finding the rest of the party, who have similar goals, we set off to do our job. Angr was one of two remaining original party members at the end of the campaign due to his anger issues, making him a valuable asset in fights.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Arin Grin</h3>
+            <button class="collapse" id="bc7" onclick="collapseDesc('c7')">show desc.</button>
+            <div class="containter" id="c7" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/arin.png">
+                </div>
+                <p>Campaign: Adventures of Anbennar</p>
+                <p>Race: Human</p>
+                <p>Alignment: Neutral Good</p>
+                <p>Class: Open Hand Monk/Spore Druid</p>
+                <p>During the Lilac Wars, Arin barely escaped with his life as a child. He then learned martial arts to both relearn stress and defend myself. After traveling with the party, seeing adventurers come and go during his expeditions of the world, he realizes he has found new family.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Taur</h3>
+            <button class="collapse" id="bc8" onclick="collapseDesc('c8')">show desc.</button>
+            <div class="containter" id="c8" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/taur.png">
+                </div>
+                <p>Campaign: ???</p>
+                <p>Race: Elf</p>
+                <p>Alignment: Lawful Good</p>
+                <p>Class: Abjuration Wizard</p>
+                <p>Taur is an old fart who gained sentience inside a tower which was being scaled by the rest of the party. Not else much is known about him other than he is insightful enough to cast Shield at the right time.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Scout E. "Terrafall" aka "Rock Recker" Wasler</h3>
+            <button class="collapse" id="bc9" onclick="collapseDesc('c9')">show desc.</button>
+            <div class="containter" id="c9" style="display: none;">
+                <div class="heroforge">
+                    <img style="cursor:pointer" id="scout" src="media/tabletop/scout.png" onclick="changeScout()">
+                </div>
+                <p>Campaign: Collateral</p>
+                <p>Race: Human</p>
+                <p>Alignment: Chaotic Neutral</p>
+                <p>System: Mutants and Masterminds 3e</p>
+                <p>Like any other superhero comic, Scout's backstory is being made up on the fly. In 2035, after having a radioactive wall fall onto him, he seeped into the earth and was granted power from "Mother Nature". With his Boston accent in tow, Scout joined Butcher's Boys simply because his father disowned him, and he was no longer a part of high society. He secretly wishes that he could go back, but he can't. This is particularly due to Mr. Waslers abusive nature, and his newfound fear of elevators. His powers require the natural earth to be around him. It was later revealed that Scout went a club called the Garden of Eden. Rumor has it that this club deals a serum that gives other people superpowers.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Lang (Genesis) Larp</h3>
+            <button class="collapse" id="bc10" onclick="collapseDesc('c10')">show desc.</button>
+            <div class="containter" id="c10" style="display: none;">
+                <div class="heroforge">
+                    <img style="cursor:pointer" id="lang" src="media/tabletop/lang.png" onclick="changeLang()">
+                </div>
+                <p>Campaign: Lost Chapter of Dugaia</p>
+                <p>Race: Human</p>
+                <p>Alignment: True Neutral</p>
+                <p>Class: Wildfire Druid / Fighter</p>
+                <p>Before his mentor's death, Lang was an alchemist by trade. After drinking a supposed potion of immortality (actually a potion of magic transferrence), his mentor passed away. After testing his immortality multple times, Lang truly began to believe he was immortal and became obsessed with gaining knowledge. Even though he wasn't very good at remembering things, at one point he became enamored with Druidic magic during his time in the Blighted Forest. After getting kicked out, he met the party to help them find the various artifacts. This was to prevent the prophecy of Dugaia from being fulfilled. While the person that keeps stealing the artifacts from the party is on the loose, Lang has helped the rest of the party defeat the Adamant Conqueror and Sonorïs, the Dissonant Aftershock. Unfortunately for the party, Sonorïs still has his contingency plans that make him immortal. The Tarrasque that he unleashed has been dealt with, but the party still needs to deal with his power over the people who heard his magnum opus. Lang ended up being the one to fire a cannon that modified everyone's memory, forgetting Sonorïs. After travelling to the center of the world, transforming himself into a Turtle Dragon, and defeated the person who stole the artifacts. Lang ends up protecting the Primal Artifact and presiding over the Adventurers Guild.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Rid Lee</h3>
+            <button class="collapse" id="bc11" onclick="collapseDesc('c11')">show desc.</button>
+            <div class="containter" id="c11" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/lee.png">
+                </div>
+                <p>Campaign: Pirate Game</p>
+                <p>Race: <s>Blue</s> Purple Gem Dragonborn</p>
+                <p>Alignment: Neutral Evil</p>
+                <p>Class: Conquest Paladin</p>
+                <p>A general of the Space Pirates, Rid Lee was transported onto the kingdom of New Azuria. A sociopath by trade, he has no qualms with killing random people he deems weak and collects heads of strong opponents just for fun. While he was born a blue Dragonborn, he secretly wishes he was purple. To do this, he douses himself in the blood of his enemies. After gathering with the rest of the party to find the One Piece, he claimed his share of the loot. In his share of the loot was the Pirate Scepter, an all-powerful artifact that can shape reality. Unfortunately, he has no clue how to use it. Before he had a chance to use the pirate scepter, he fell in battle. A botched resurrection left his spirit destroyed and he left his dreams of reuniting with the Space Pirates. He had no longer recognized himself. If he were to come back one day, he would trek a path of vengeance.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Chopin Block</h3>
+            <button class="collapse" id="bc12" onclick="collapseDesc('c12')">show desc.</button>
+            <div class="containter" id="c12" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/chopin.png">
+                </div>
+                <p>Campaign: Pirate Game</p>
+                <p>Race: Goliath</p>
+                <p>Alignment: Neutral Evil</p>
+                <p>Class: Wolf Totem Barbarian</p>
+                <p>Chopin (pronounced Chopping) Block is a "hood gangster" who is "keeping the streets cold" and "keeping the block hot." While he is a moronic idiot who thinks he's a real gangster, he does possess a talent in combat. Able to bolster others while dual-wielding his Flame Tongue and Frost Brand, he helped the party obtain the Arctal Tear and defeat the demon of greed, Lucian Blythe. He also finished off Davey Jones after being revived from the brink of death. He also recieved a Belt of Storm Giant Strength after helping prove the party was worthy of stopping Blackbeard. After being banished for 4 rounds in the second to last fight, the party successfully killed Blackbeard in the Realm of Dreams.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Argentinalander (Messi)</h3>
+            <button class="collapse" id="bc13" onclick="collapseDesc('c13')">show desc.</button>
+            <div class="containter" id="c13" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/lander.png">
+                </div>
+                <p>Campaign: The Bloodbride Oneshot</p>
+                <p>Race: Human</p>
+                <p>Alignment: Chaotic Neutral</p>
+                <p>Class: Bladesinger Wizard</p>
+                <p>After the Old Testament Crew woke up in a fountain, they find the current Princess of the ruling kingdom, her maid, and her bodyguard in a conquered town. After teaming up with them, they realize the maid is actually an android. This fact is not supposed to be known by people outside of the monarchy, resulting in a combat between the 4 Landers and the Monarchy. While fighting the three of them, Argentinalander landed multiple blows by using Time Stop, but ultimately perished when he was hit by a well-timed Meteor Storm.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Thirti-on Thyrte</h3>
+            <button class="collapse" id="bc14" onclick="collapseDesc('c14')">show desc.</button>
+            <div class="containter" id="c14" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/thirti-on.gif">
+                </div>
+                <p>Campaign: The Great Dragon-Ball Oneshot</p>
+                <p>Race: Frieza Race</p>
+                <p>Alignment: Chaotic Good</p>
+                <p>Class: Champion Fighter</p>
+                <p>Not a big fan of the Government, he was locked up in prison because he didn't pay his taxes. After escaping prison, he found the party during a scuffle with a bunch of other idiots. During this adventure, the party met Nagukab, a being who is able to absorb the Dragon Balls. To combat him, the party first had to go to the Dragon Ball Factory. In order to obtain a set of Dragon Balls, at least one person in the party needed to be Pure of Heart. That one person was Thirti-on. After obtaining the Dragon Balls, the party was able to best Nagukab, even after Thirti-on needed to 1v1 a weakened version of him in the Tournament of Power. After this, the party disbanded.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Jerkoff & Hide</h3>
+            <button class="collapse" id="bc15" onclick="collapseDesc('c15')">show desc.</button>
+            <div class="containter" id="c15" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/j&h.png">
+                </div>
+                <p>Campaign: Bloons Tower Defense Oneshot</p>
+                <p>Alignment: True Neutral</p>
+                <p>Class: Beast Master Ranger</p>
+                <p>Private Jekall made a lot of mistakes during bootcamp in the Navy, as a result, the DI made him answer to Private Jerkoff. The name stuck. Hide is his condor which he befriended after an accident during said bootcamp. He fought Bloonarius, Vortex, and Blastapopoulos with everyone else.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Oli D'Up</h3>
+            <button class="collapse" id="bc16" onclick="collapseDesc('c16')">show desc.</button>
+            <div class="containter" id="c16" style="display: none;">
+                <div class="heroforge">
+                    <img src="media/tabletop/a.png">
+                </div>
+                <p>Campaign: Superhero Oneshot</p>
+                <p>Alignment: Chaotic Neutral</p>
+                <p>Class: Warrior of Shadow Monk</p>
+                <p>A pure blooded American. Has a stable job and loving family. He loves pure oil more than that though, just like the United States Government.</p>
+            </div>
+        </div>
+        <script>
+        function collapseDesc(id) {
+            let img = document.getElementById(id)
+            let button = document.getElementById("b"+id)
+            if (img.style.display != "none") {
+                img.style.display = "none"
+                button.innerHTML = "show desc."
+            }
+            else {
+                img.style.display = ""
+                button.innerHTML = "hide desc."
+            }
+        }
+        let c = 0
+        function changeChance() {
+            let img = document.getElementById("chance")
+            if (c == 0) {
+                img.src = "media/tabletop/chance2.png"
+                c = 1
+            }
+            else if (c == 1) {
+                img.src = "media/tabletop/chance3.png"
+                c = 2
+            }
+            else {
+                img.src = "media/tabletop/chance.png"
+                c = 0
+            }
+        }
+        let s = 0
+        function changeScout() {
+            let img = document.getElementById("scout")
+            if (s == 0) {
+                img.src = "media/tabletop/scout2.png"
+                s = 1
+            }
+            else if (s == 1) {
+                img.src = "media/tabletop/scout3.png"
+                s = 2
+            }
+            else {
+                img.src = "media/tabletop/scout.png"
+                s = 0
+            }
+        }
+        let l = 0
+        function changeLang() {
+            let img = document.getElementById("lang")
+            if (l == 0) {
+                img.src = "media/tabletop/lang2.png"
+                l = 1
+            }
+            else {
+                img.src = "media/tabletop/lang.png"
+                l = 0
+            }
+        }
+        </script>
+    </body>
+</html>

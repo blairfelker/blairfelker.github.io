@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name">
+            <h2>Art</h2>
+            <img class="me" style="cursor:default" src="media/180/oil.JPG">
+            <div class="sub">
+                <p>I've always had an appreciation for art. This mostly stems from just colors in general. I love color theory and how different colors can interact with each other in pictures and artistic works.</p>
+            </div>
+            <div class="sub">
+                <p>The image to the left is an oil painting where the instructor had us use a muted color palette with no blues. I forget what the actual painting is based off of, but there's a lot of good usage of colors in here. It does look a bit rushed though.</p>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Funny Pictures</h3>
+            <p>I took some pictures for a photography elective. I'm really proud of these. My old 
+                <a href="https://blairfelker.weebly.com" target="_blank">website</a> hosted on weebly also has these.
+            </p>
+            <p>Note that these are not decompressed and will need to load.</p>
+            <button id="collapse180" class="collapse" onclick="collapse180()">collapse</button>
+            <div class="containter" id="art180" style="height: auto;">
+                <div class="containter" style="width: 50%; float:left">
+                    <img class="art180" src="media/180/1.png">
+                    <img class="art180" src="media/180/2.png">
+                    <img class="art180" src="media/180/3.png">
+                    <img class="art180" src="media/180/4.png">
+                    <img class="art180" src="media/180/5.png">
+                    <img class="art180" src="media/180/6.png">
+                    <img class="art180" src="media/180/7.png">
+                    <img class="art180" src="media/180/8.png">
+                    <img class="art180" src="media/180/9.png">
+                    <img class="art180" src="media/180/10.png">
+                </div>
+                <div class="containter" style="width:50%; float:right">
+                    <img class="art180" src="media/180/11.png">
+                    <img class="art180" src="media/180/12.png">
+                    <img class="art180" src="media/180/13.png">
+                    <img class="art180" src="media/180/14.png">
+                    <img class="art180" src="media/180/15.png">
+                    <img class="art180" src="media/180/16.png">
+                    <img class="art180" src="media/180/17.png">
+                    <img class="art180" src="media/180/18.png">
+                    <img class="art180" src="media/180/19.png">
+                    <img class="art180" src="media/180/20.png">
+                </div>
+            </div>
+            <button id="collapseremove180" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">collapse</button>
+        </div>
+        <div class="info">
+            <h3>Theater</h3>
+            <p>Performing arts are art right? Lord knows I'm not going to put that I'm a theater kid on the main page.</p>
+            <p>I was usually cast as the older people.</p>
+            <p>I've starred in Beauty in the Beast, Get Smart, Fiddler on the Roof, Little Women: The Musical, Grease, Alice in Wonderland, Little Shop of Horrors, and Leading Ladies.</p>
+            <p>I was going to be in Chicago, but that was cancelled due to COVID 19.</p>
+            <p>I was given this photobook in the mail by the director.</p>
+            <button id="collapseHS" class="collapse" onclick="collapseHS()">collapse</button>
+            <div class="containter" id="theater" style="height: auto;">
+                <div class="containter" style="width: 50%; float:left">
+                    <img class="art180"src="media/hstheater/IMG_9780.png">
+                    <img class="art180"src="media/hstheater/IMG_9784.png">
+                    <img class="art180"src="media/hstheater/IMG_9785.png">
+                    <img class="art180"src="media/hstheater/IMG_9786.png">
+                    <img class="art180"src="media/hstheater/IMG_9787.png">
+                </div>
+                <div class="containter" style="width:50%; float:right">
+                    <img class="art180"src="media/hstheater/IMG_9788.png">
+                    <img class="art180"src="media/hstheater/IMG_9789.png">
+                    <img class="art180"src="media/hstheater/IMG_9790.png">
+                    <img class="art180"src="media/hstheater/IMG_9791.png">
+                    <img class="art180"src="media/hstheater/IMG_9792.png">
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <button id="collapseremovehs" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseHS()">collapse</button>
+        </div>
+        <div class="info">
+            <h3>3D Modeling</h3>
+            <p>I was introduced to 3D Modeling in 9th grade when my engineering class had us use Inventor for a project. We needed to make a puzzle from cubes, then model it. I fell in love with this and while I currently use Fusion 360, I still enjoy creating things in Fusion.</p>
+            <button id="collapseModels" class="collapse" onclick="collapseModels()">collapse</button>
+            <div class="containter" id="models">
+                <div class="info2">
+                    <h4>Raspberry PI Case</h4>
+                    <p>While this isn't necessarily a case, it still looks cool when I put my Raspberry PI into it. It is based off of Tombstone from Battlebots. The case itself went over a couple iterations, and actually took me over a year to be happy with it. The whole project cost around 5 dollars, 1 for each print.</p>
+                    <div class="containter">
+                        <img id="pi" style="width: 65%; float:left" class="art180" src="media/model/picase.png">
+                        <img id="pi2" style="width: 65%; float:right" class="art180" src="media/model/picase2.png">
+                    </div>
+                </div>
+                <div class="info2">
+                    <h4>R.O.B.</h4>
+                    <p>I made R.O.B. in high school as a side project. I unfortunately never got him printed.</p>
+                    <div class="containter">
+                        <img id="rob1" style="width: 48%; float:left" class="art180" src="media/model/rob.png">
+                        <img id="rob2" style="width: 48%; float:right" class="art180" src="media/model/rob2.png">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <button id="collapseremovemodel" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseModels()">collapse</button>
+        </div>
+        <!-- <div class="info">
+            <h3></h3>
+            <p></p>
+        </div> -->
+    </body>
+    <script>
+        function collapse180() {
+            let pictures = document.getElementById("art180")
+            let button = document.getElementById("collapse180")
+            let buttonRemove = document.getElementById("collapseremove180")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+        function collapseHS() {
+            let pictures = document.getElementById("theater")
+            let button = document.getElementById("collapseHS")
+            let buttonRemove = document.getElementById("collapseremovehs")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+        function collapseModels() {
+            let pictures = document.getElementById("models")
+            let button = document.getElementById("collapseModels")
+            let buttonRemove = document.getElementById("collapseremovemodel")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+    </script>
+</html>
