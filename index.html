@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="name">
+            <h2>Blair Felker's Personal Website</h2>
+            <img class="me" id="me" src="media/me/1.png" onclick="me()">
+            <div class="sub" id="sub">
+                <!-- <p>Hi my name is Blair Felker. I'm 22 years old. I am very similar to you. Did I mention to you that I'm dead? A few years ago a group of girls pushed me down a sewer hole to try and embarrass me. When I didn't come back up the police came.The girl said that I had fell and everyone believed them. The police found my body in the sewer. I had a broken neck and my face was torn off. Send this message to 15 people after you listened the whole message if you value your life. A boy called David received this message. He just left and deleted it. When he was in the shower he heard laughing. My laughter. He got really scared and rushed to his phone to repost this message but he was too late. The next morning his mom entered his bedroom and all she found was a message written in his blood saying 'You will never have him back'. No one has found his body yet because he is with me. A girl called Charlotte received this message and she immediately sent it to 25 people, 10 more than required. I still watch over every second of her life to make sure that she is safe and to keep her and everyone close to her out of danger. Send this to 15 people in the next five minutes if you don't want your fate to be the same as David's. Your time starts now.the story is true you can research it on Google.</p> -->
+                <p>Hi! I'm Blair. That's me on the left.</p>
+                <p>Born and raised in southern Delaware, I went to Univeristy of Delaware for my Bachelors Degree in Computer Science.</p>
+                <p>Though I studied Artificial Intelligence in college, I much prefer searching for a solution using an algorithm rather than using neural networks.</p>
+                <p>I enjoy helping others learn Computer Science, whether its the basics, data structures, or search algorithms.</p>
+                <p>My favorite programming languages are Python and <span style="white-space: nowrap;">C++.</span></p>
+                <p>You can contact me through my email at <a href="mailto:blairfelker@gmail.com">blairfelker@gmail.com</a> for any questions.</p>
+            </div>
+            <div class="sub">
+                <p>You can download my resume here.</p>
+                <button onClick="downloadResume()">Download Resume</button>
+                <button onClick="window.open('https://en.wikipedia.org/wiki/Ozymandias_%28Breaking_Bad%29')">
+                Don't Click This!</button>
+            </div>
+        </div>
+        <div class="info">
+            <h3>Personal Projects</h3>
+            <p>
+                <button onclick='window.open("8solver.html")'>8-Puzzle Solver</button> Solve any (solvable) sliding puzzle.
+                <br>
+                <button onclick='window.open("sudoku.html")'>Sudoku Solvers</button> Solve any 4x4, 6x6, or 9x9 sudoku puzzle.
+                <br>
+                <button disabled>Automata Tester</button> Holy moly I love abstract machines.
+                <br>
+                <button onclick='window.open("acidtrip.html")'>Acid Trip</button> Deepfry any image beyond repair.
+                <br>
+                <button onclick='window.open("https://devpost.com/software/sound-ificator-inator")'>Sound-Ificator-Inator</button> The Henhacks 2024 hackathon winner for accessibility.
+            </p>
+        </div>
+        <div class="info">
+            <h3>Affiliations</h3>
+            <a href="https://upsidedownchrisplusthecliguys.bandcamp.com/" target="_blank"><img src="media/sponsors/band.png" class="sponsor"></a>
+            &nbsp;
+            <a href="https://sparclab.work" target="_blank"><img src="media/sponsors/sparc.png" class="sponsor"></a>
+            &nbsp;
+            <a href="https://ctftime.org/team/64660/" target="_blank"><img src="media/sponsors/udctf.png" class="sponsor"></a>
+        </div>
+        <div class="info" id="pics">
+            <h3>Funny Pictures</h3>
+            <p>I took some pictures for a photography elective. I'm really proud of these. My old 
+                <a href="https://blairfelker.weebly.com" target="_blank">website</a> hosted on weebly also has these.
+            </p>
+            <button id="collapse" class="collapse" onclick="collapse180()">Collapse</button>
+            <div class="containter" id="art180" style="height: auto;">
+                <div class="containter" style="width: 50%; float:left">
+                    <img class="art180" src="media/180/1.png">
+                    <img class="art180" src="media/180/2.png">
+                    <img class="art180" src="media/180/3.png">
+                    <img class="art180" src="media/180/4.png">
+                    <img class="art180" src="media/180/5.png">
+                    <img class="art180" src="media/180/6.png">
+                    <img class="art180" src="media/180/7.png">
+                    <img class="art180" src="media/180/8.png">
+                    <img class="art180" src="media/180/9.png">
+                    <img class="art180" src="media/180/10.png">
+                </div>
+                <div class="containter" style="width:50%; float:right">
+                    <img class="art180" src="media/180/11.png">
+                    <img class="art180" src="media/180/12.png">
+                    <img class="art180" src="media/180/13.png">
+                    <img class="art180" src="media/180/14.png">
+                    <img class="art180" src="media/180/15.png">
+                    <img class="art180" src="media/180/16.png">
+                    <img class="art180" src="media/180/17.png">
+                    <img class="art180" src="media/180/18.png">
+                    <img class="art180" src="media/180/19.png">
+                    <img class="art180" src="media/180/20.png">
+                </div>
+            </div>
+            <button id="collapseremove" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">Collapse</button>
+        </div>
+        <div class="info">
+            <img class="nooutline" style="width: 15%; float:right; margin-top:15px; cursor: pointer;" onclick="tf2crit()" src="media/home/aussie.png">
+            <h3>Hobbies</h3>
+            <p>Click these buttons for information on my hobbies.</p>
+            <button onclick="window.open('pokemon.html')">Pokemon</button>
+            <button onclick="window.open('dnd.html')">D&D</button>
+        </div>
+    </body>
+    <script>
+        function collapse180() {
+            let pictures = document.getElementById("art180")
+            let button = document.getElementById("collapse")
+            let buttonRemove = document.getElementById("collapseremove")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "Uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "Collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+        function me() {
+            let me = document.getElementById("me")
+            let rand = Math.ceil(Math.random() * 8)
+            me.src = "media/me/"+(rand)+".png"
+            if (rand == 4) {
+                document.body.style.fontFamily = "Comic Sans MS"
+            }
+            else {
+                document.body.style.fontFamily = ""
+            }
+        }
+        me()
+        function downloadResume() {
+            var resume = document.createElement('a')
+            resume.href = 'files/Blair Felker Resume.pdf'
+            resume.download = ''
+            document.body.appendChild(resume)
+            resume.click()
+            resume.body.removeChild(resume);
+        }
+        var crit = new Audio("media/home/crit.mp3")
+        function tf2crit() {
+            crit.play()
+        }
+    </script>
+</html>
