@@ -29,7 +29,7 @@ button:disabled {
     cursor: default;
 }
 h2 {
-    color: darkblue;
+    color: #00008b;
 }
 .me {
     min-width: 300px;
@@ -56,7 +56,7 @@ div {
     border: 3px solid #000000;
     border-radius: 25px;
     width: 70%;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px #000000;
     object-fit: contain;
     position: relative;
 }
@@ -108,29 +108,29 @@ input[type=number] {
     appearance: textfield;
 }
 table {
-    border: 3px solid black;
+    border: 3px solid #000000;
     border-collapse: collapse;
     margin-right: 20px;
     margin-bottom: 15px;
     float: left;
-    box-shadow: 5px 5px 10px black;
-    background-color: white;
+    box-shadow: 5px 5px 10px #000000;
+    background-color: #ffffff;
 }
 td {
     width: 64px;
     height: 64px;
     padding: 0;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid #000000;
     text-align: center;
     vertical-align: center;
     font-size: 1em;
 }
 tr.box-bottom td {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #000000;
 }
 
 td.box-side {
-    border-right: 3px solid black;
+    border-right: 3px solid #000000;
 }
 .info2 {
     width:auto; 
