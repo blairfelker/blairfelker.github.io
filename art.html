@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blair Felker's Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    </head>
+    <body>
+        <div class="name">
+            <h2>Art</h2>
+            <div class="sub">
+                <p>I've always had an appreciation for art. This mostly stems from just colors in general. I love color theory and how different colors can interact with each other in pictures and artistic works.</p>
+                <p>This page is unfinished.</p>
+            </div>
+        </div>
+        <div class="info" id="pics">
+            <h3>Funny Pictures</h3>
+            <p>I took some pictures for a photography elective. I'm really proud of these. My old 
+                <a href="https://blairfelker.weebly.com" target="_blank">website</a> hosted on weebly also has these.
+            </p>
+            <button id="collapse" class="collapse" onclick="collapse180()">Collapse</button>
+            <div class="containter" id="art180" style="height: auto;">
+                <div class="containter" style="width: 50%; float:left">
+                    <img class="art180" src="media/180/1.png">
+                    <img class="art180" src="media/180/2.png">
+                    <img class="art180" src="media/180/3.png">
+                    <img class="art180" src="media/180/4.png">
+                    <img class="art180" src="media/180/5.png">
+                    <img class="art180" src="media/180/6.png">
+                    <img class="art180" src="media/180/7.png">
+                    <img class="art180" src="media/180/8.png">
+                    <img class="art180" src="media/180/9.png">
+                    <img class="art180" src="media/180/10.png">
+                </div>
+                <div class="containter" style="width:50%; float:right">
+                    <img class="art180" src="media/180/11.png">
+                    <img class="art180" src="media/180/12.png">
+                    <img class="art180" src="media/180/13.png">
+                    <img class="art180" src="media/180/14.png">
+                    <img class="art180" src="media/180/15.png">
+                    <img class="art180" src="media/180/16.png">
+                    <img class="art180" src="media/180/17.png">
+                    <img class="art180" src="media/180/18.png">
+                    <img class="art180" src="media/180/19.png">
+                    <img class="art180" src="media/180/20.png">
+                </div>
+            </div>
+            <button id="collapseremove" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">Collapse</button>
+        </div>
+        <div class="info">
+            <h3></h3>
+            <p></p>
+        </div>
+    </body>
+    <script>
+        function collapse180() {
+            let pictures = document.getElementById("art180")
+            let button = document.getElementById("collapse")
+            let buttonRemove = document.getElementById("collapseremove")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "Uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "Collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+    </script>
+</html>
