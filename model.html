@@ -15,7 +15,7 @@
         <br>
         <div class="info">
             <h3>Raspberry PI Case</h3>
-            <button class="collapse" id="b1" onclick="collapseModel('1')">Show Model</button>
+            <button class="collapse" id="b1" onclick="collapseModel('1')">show model</button>
             <div class="containter" id="1" style="display: none;">
                 <img id="pi" style="cursor: pointer;" onclick="changePI()"src="media/model/picase.png">
                 <p>While this isn't necessarily a case, it still looks cool when I put my Raspberry PI into it. It is based off of Tombstone from Battlebots. The case itself went over a couple iterations, and actually took me over a year to be happy with it. The whole project cost around 5 dollars, 1 for each print.</p>
@@ -24,7 +24,7 @@
         <br>
         <div class="info">
             <h3>R.O.B.</h3>
-            <button class="collapse" id="b2" onclick="collapseModel('2')">Show Model</button>
+            <button class="collapse" id="b2" onclick="collapseModel('2')">show model</button>
             <div class="containter" id="2" style="display: none;">
                 <img id="rob" src="media/model/rob.png" style="cursor: pointer;" onclick="changeROB()">
                 <p>I made R.O.B. in high school as a side project. I unfortunately never got him printed.</p>
@@ -52,11 +52,11 @@
             let button = document.getElementById("b"+id)
             if (img.style.display != "none") {
                 img.style.display = "none"
-                button.innerHTML = "Show Model"
+                button.innerHTML = "show model"
             }
             else {
                 img.style.display = ""
-                button.innerHTML = "Hide Model"
+                button.innerHTML = "hide model"
             }
         }
         let r = 0
