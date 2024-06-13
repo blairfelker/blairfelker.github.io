@@ -143,13 +143,13 @@
             <button class="collapse" id="bc10" onclick="collapseDesc('c10')">show desc.</button>
             <div class="containter" id="c10" style="display: none;">
                 <div class="heroforge">
-                    <img src="media/tabletop/lang.png">
+                    <img style="cursor:pointer" id="lang" src="media/tabletop/lang.png" onclick="changeLang()">
                 </div>
                 <p>Campaign: Lost Chapter of Dugaia</p>
                 <p>Race: Human</p>
                 <p>Alignment: True Neutral</p>
                 <p>Class: Wildfire Druid / Fighter</p>
-                <p>Before his mentor's death, Lang was an alchemist by trade. After drinking a supposed potion of immortality (actually a potion of magic transferrence), his mentor passed away. After testing his immortality multple times, Lang truly began to believe he was immortal and became obsessed with gaining knowledge. Even though he wasn't very good at remembering things, at one point he became enamored with Druidic magic during his time in the Blighted Forest. After getting kicked out, he met the party to help them find the various artifacts. This was to prevent the prophecy of Dugaia from being fulfilled. While the person that keeps stealing the artifacts from the party is on the loose, Lang has helped the rest of the party defeat the Adamant Conqueror and Sonorïs, the Dissonant Aftershock. Unfortunately for the party, Sonorïs still has his contingency plans that make him immortal. The Tarrasque that he unleashed has been dealt with, but the party still needs to deal with his power over the people who heard his magnum opus. Lang ended up being the one to fire a cannon that modified everyone's memory, forgetting Sonorïs. </p>
+                <p>Before his mentor's death, Lang was an alchemist by trade. After drinking a supposed potion of immortality (actually a potion of magic transferrence), his mentor passed away. After testing his immortality multple times, Lang truly began to believe he was immortal and became obsessed with gaining knowledge. Even though he wasn't very good at remembering things, at one point he became enamored with Druidic magic during his time in the Blighted Forest. After getting kicked out, he met the party to help them find the various artifacts. This was to prevent the prophecy of Dugaia from being fulfilled. While the person that keeps stealing the artifacts from the party is on the loose, Lang has helped the rest of the party defeat the Adamant Conqueror and Sonorïs, the Dissonant Aftershock. Unfortunately for the party, Sonorïs still has his contingency plans that make him immortal. The Tarrasque that he unleashed has been dealt with, but the party still needs to deal with his power over the people who heard his magnum opus. Lang ended up being the one to fire a cannon that modified everyone's memory, forgetting Sonorïs. After travelling to the center of the world, transforming himself into a Turtle Dragon, and defeated the person who stole the artifacts. Lang ends up protecting the Primal Artifact and presiding over the Adventurers Guild.</p>
             </div>
         </div>
         <div class="info">
@@ -177,7 +177,7 @@
                 <p>Race: Goliath</p>
                 <p>Alignment: Neutral Evil</p>
                 <p>Class: Wolf Totem Barbarian</p>
-                <p>Chopin (pronounced Chopping) Block is a "hood gangster" who is "keeping the streets cold" and "keeping the block hot." While he is a moronic idiot who thinks he's a real gangster, he does possess a talent in combat. Able to bolster others while dual-wielding his Flame Tongue and Frost Brand, he helped the party obtain the Arctal Tear and defeat the demon of greed, Lucian Blythe. He also finished off Davey Jones after being revived from the brink of death. He also recieved a Belt of Storm Giant Strength after helping prove the party was worthy of stopping Blackbeard.</p>
+                <p>Chopin (pronounced Chopping) Block is a "hood gangster" who is "keeping the streets cold" and "keeping the block hot." While he is a moronic idiot who thinks he's a real gangster, he does possess a talent in combat. Able to bolster others while dual-wielding his Flame Tongue and Frost Brand, he helped the party obtain the Arctal Tear and defeat the demon of greed, Lucian Blythe. He also finished off Davey Jones after being revived from the brink of death. He also recieved a Belt of Storm Giant Strength after helping prove the party was worthy of stopping Blackbeard. After being banished for 4 rounds in the second to last fight, the party successfully killed Blackbeard in the Realm of Dreams.</p>
             </div>
         </div>
         <div class="info">
@@ -251,6 +251,18 @@
             else {
                 img.src = "media/tabletop/scout.png"
                 s = 0
+            }
+        }
+        let l = 0
+        function changeLang() {
+            let img = document.getElementById("lang")
+            if (l == 0) {
+                img.src = "media/tabletop/lang2.png"
+                l = 1
+            }
+            else {
+                img.src = "media/tabletop/lang.png"
+                l = 0
             }
         }
         </script>
