@@ -18,7 +18,7 @@
             <p>I took some pictures for a photography elective. I'm really proud of these. My old 
                 <a href="https://blairfelker.weebly.com" target="_blank">website</a> hosted on weebly also has these.
             </p>
-            <button id="collapse" class="collapse" onclick="collapse180()">collapse</button>
+            <button id="collapse180" class="collapse" onclick="collapse180()">collapse</button>
             <div class="containter" id="art180" style="height: auto;">
                 <div class="containter" style="width: 50%; float:left">
                     <img class="art180" src="media/180/1.png">
@@ -45,7 +45,36 @@
                     <img class="art180" src="media/180/20.png">
                 </div>
             </div>
-            <button id="collapseremove" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">Collapse</button>
+            <button id="collapseremove180" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">Collapse</button>
+        </div>
+        <div class="info" id="theater">
+            <h3>Theater</h3>
+            <p>Performing arts are art right? Lord knows I'm not going to put that I'm a theater kid on the main page.</p>
+            <p>I was usually cast as the older people.</p>
+            <p>I've starred in Beauty in the Beast, Get Smart, Fiddler on the Roof, Little Women: The Musical, Grease, Alice in Wonderland, Little Shop of Horrors, and Leading Ladies.</p>
+            <p>I was going to be in Chicago, but that was cancelled due to COVID 19.</p>
+            <p>I was given this photobook in the mail by the director.</p>
+            <button id="collapseHS" class="collapse" onclick="collapseHS()">collapse</button>
+            <div class="containter" id="HSTHEA" style="height: auto;">
+                <div class="containter" style="width: 50%; float:left">
+                    <img class="art180"src="media/hstheater/IMG_9780.png">
+                    <img class="art180"src="media/hstheater/IMG_9784.png">
+                    <img class="art180"src="media/hstheater/IMG_9785.png">
+                    <img class="art180"src="media/hstheater/IMG_9786.png">
+                    <img class="art180"src="media/hstheater/IMG_9787.png">
+                </div>
+                <div class="containter" style="width:50%; float:right">
+                    <img class="art180"src="media/hstheater/IMG_9788.png">
+                    <img class="art180"src="media/hstheater/IMG_9789.png">
+                    <img class="art180"src="media/hstheater/IMG_9790.png">
+                    <img class="art180"src="media/hstheater/IMG_9791.png">
+                    <img class="art180"src="media/hstheater/IMG_9792.png">
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <button id="collapseremovehs" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseHS()">Collapse</button>
         </div>
         <!-- <div class="info">
             <h3></h3>
@@ -55,8 +84,23 @@
     <script>
         function collapse180() {
             let pictures = document.getElementById("art180")
-            let button = document.getElementById("collapse")
-            let buttonRemove = document.getElementById("collapseremove")
+            let button = document.getElementById("collapse180")
+            let buttonRemove = document.getElementById("collapseremove180")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+        function collapseHS() {
+            let pictures = document.getElementById("HSTHEA")
+            let button = document.getElementById("collapseHS")
+            let buttonRemove = document.getElementById("collapseremovehs")
             if (pictures.style.display != "none") {
                 pictures.style.display = "none"
                 button.innerHTML = "uncollapse"
