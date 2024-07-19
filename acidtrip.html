@@ -14,8 +14,8 @@
         <div class="info2">
             <p>My image deepfrier/cooker/fuck-uper.</p>
             <p>This is a fraction of what it can do.</p>
-            <button id="cdrake" class="collapse" onclick="changeDrake()">deepfry</button>
-            <img id="drake" style="width: 100%;" src="media/acidtrip/Drake.png">
+            <button id="cpic" class="collapse" onclick="changePic()">deepfry</button>
+            <img id="pic" style="width: 100%;" src="media/acidtrip/spunchbop.webp">
         </div>
         <br>
         <div class="info2">
@@ -43,16 +43,16 @@
         </div>
     <script>
         let drake = 1
-        function changeDrake() {
-            let d = document.getElementById("drake")
-            let c = document.getElementById("cdrake")
+        function changePic() {
+            let d = document.getElementById("pic")
+            let c = document.getElementById("cpic")
             if (drake) {
-                d.src = "media/acidtrip/Drake on acid2.png"
+                d.src = "media/acidtrip/spunchbop on acid3.png"
                 c.innerHTML = "Un-Deepfry"
                 drake = 0
             }
             else {
-                d.src = "media/acidtrip/Drake.png"
+                d.src = "media/acidtrip/spunchbop.webp"
                 c.innerHTML = "Deepfry"
                 drake = 1
             }
