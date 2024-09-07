@@ -22,8 +22,6 @@
                 <a href="https://www.youtube.com/channel/UCJLvbvByfuiudkY0JQoKQxw" target="_blank"><img class="nooutline" style="width: 20px" src="media/socials/youtube.png"></a>
             </div>
             <div class="sub">
-                <p>You can download my resume here.</p>
-                <button onClick="downloadResume()">download resume</button>
                 <button onClick="window.open('https://en.wikipedia.org/wiki/Ozymandias_%28Breaking_Bad%29')">
                 do not click this!</button>
             </div>
@@ -82,14 +80,6 @@
             }
         }
         me()
-        function downloadResume() {
-            var resume = document.createElement('a')
-            resume.href = 'files/Blair Felker Resume.pdf'
-            resume.download = ''
-            document.body.appendChild(resume)
-            resume.click()
-            resume.body.removeChild(resume);
-        }
         var crit = new Audio("media/home/crit.mp3")
         crit.volume = .5
         function tf2crit() {
