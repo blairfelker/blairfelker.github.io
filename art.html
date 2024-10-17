@@ -13,7 +13,7 @@
                 <p>I've always had an appreciation for art. This mostly stems from just colors in general. I love color theory and how different colors can interact with each other in pictures and artistic works.</p>
             </div>
         </div>
-        <div class="info" id="pics">
+        <div class="info">
             <h3>Funny Pictures</h3>
             <p>I took some pictures for a photography elective. I'm really proud of these. My old 
                 <a href="https://blairfelker.weebly.com" target="_blank">website</a> hosted on weebly also has these.
@@ -46,9 +46,9 @@
                     <img class="art180" src="media/180/20.png">
                 </div>
             </div>
-            <button id="collapseremove180" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">Collapse</button>
+            <button id="collapseremove180" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapse180()">collapse</button>
         </div>
-        <div class="info" id="theater">
+        <div class="info">
             <h3>Theater</h3>
             <p>Performing arts are art right? Lord knows I'm not going to put that I'm a theater kid on the main page.</p>
             <p>I was usually cast as the older people.</p>
@@ -56,7 +56,7 @@
             <p>I was going to be in Chicago, but that was cancelled due to COVID 19.</p>
             <p>I was given this photobook in the mail by the director.</p>
             <button id="collapseHS" class="collapse" onclick="collapseHS()">collapse</button>
-            <div class="containter" id="HSTHEA" style="height: auto;">
+            <div class="containter" id="theater" style="height: auto;">
                 <div class="containter" style="width: 50%; float:left">
                     <img class="art180"src="media/hstheater/IMG_9780.png">
                     <img class="art180"src="media/hstheater/IMG_9784.png">
@@ -75,7 +75,34 @@
                 <br>
                 <br>
             </div>
-            <button id="collapseremovehs" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseHS()">Collapse</button>
+            <button id="collapseremovehs" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseHS()">collapse</button>
+        </div>
+        <div class="info">
+            <h3>3D Modeling</h3>
+            <p>I was introduced to 3D Modeling in 9th grade when my engineering class had us use Inventor for a project. We needed to make a puzzle from cubes, then model it. I fell in love with this and while I currently use Fusion 360, I still enjoy creating things in Fusion.</p>
+            <button id="collapseModels" class="collapse" onclick="collapseModels()">collapse</button>
+            <div class="containter" id="models">
+                <div class="info2">
+                    <h4>Raspberry PI Case</h4>
+                    <p>While this isn't necessarily a case, it still looks cool when I put my Raspberry PI into it. It is based off of Tombstone from Battlebots. The case itself went over a couple iterations, and actually took me over a year to be happy with it. The whole project cost around 5 dollars, 1 for each print.</p>
+                    <div class="containter">
+                        <img id="pi" style="width: 65%; float:left" class="art180" src="media/model/picase.png">
+                        <img id="pi2" style="width: 65%; float:right" class="art180" src="media/model/picase2.png">
+                    </div>
+                </div>
+                <div class="info2">
+                    <h4>R.O.B.</h4>
+                    <p>I made R.O.B. in high school as a side project. I unfortunately never got him printed.</p>
+                    <div class="containter">
+                        <img id="rob1" style="width: 48%; float:left" class="art180" src="media/model/rob.png">
+                        <img id="rob2" style="width: 48%; float:right" class="art180" src="media/model/rob2.png">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <button id="collapseremovemodel" style="position: absolute; bottom: 15px; right: 15px;" onclick="collapseModels()">collapse</button>
         </div>
         <!-- <div class="info">
             <h3></h3>
@@ -99,9 +126,24 @@
             }
         }
         function collapseHS() {
-            let pictures = document.getElementById("HSTHEA")
+            let pictures = document.getElementById("theater")
             let button = document.getElementById("collapseHS")
             let buttonRemove = document.getElementById("collapseremovehs")
+            if (pictures.style.display != "none") {
+                pictures.style.display = "none"
+                button.innerHTML = "uncollapse"
+                buttonRemove.style.display = "none"
+            }
+            else {
+                pictures.style.display = ""
+                button.innerHTML = "collapse"
+                buttonRemove.style.display = ""
+            }
+        }
+        function collapseModels() {
+            let pictures = document.getElementById("models")
+            let button = document.getElementById("collapseModels")
+            let buttonRemove = document.getElementById("collapseremovemodel")
             if (pictures.style.display != "none") {
                 pictures.style.display = "none"
                 button.innerHTML = "uncollapse"
