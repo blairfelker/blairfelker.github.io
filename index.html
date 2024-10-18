@@ -66,8 +66,23 @@
         </div>
         <div class="info">
             <h3>Fun Facts</h3>
-            <p>I have a <a href="https://www.youtube.com/watch?v=_csutNtHZPw">video</a> on Youtube that has approximately 4.1 million views.</p>
-            <p>I have a black belt in Taekwondo.</p>
+            <p>
+                I have a <a href="https://www.youtube.com/watch?v=_csutNtHZPw">video</a> on Youtube that has approximately 4.1 million views.
+                <br>
+                I have a black belt in Taekwondo.
+                <br>
+                I exist in a SoundSmith <a href="https://www.youtube.com/watch?v=nEmAzgAH-gc&list=PLOhzvyjgAq851jrYIdxw7rk5Xen4C2Dg0&t=430s">video</a>.
+                <br>
+                I am 5'5".
+                <br>
+                I have traveled to the Dominican Republic and Iceland.
+                <br>
+                I've never broken a bone.
+                <br>
+                My favorite anime series is JoJo's Bizzare Adventure.
+                <br>
+                I am missing one of my teeth.
+            </p>
         </div>
     </body>
     <script>
@@ -76,6 +91,10 @@
             let rand = Math.ceil(Math.random() * 9)
             me.src = "media/me/"+(rand)+".png"
             if (rand == 4) {
+                subs = document.getElementsByClassName("sub")
+                for (i=0; i<subs.length; i++){
+                    subs[i].style.fontFamily = "Comic Sans MS"
+                }
                 document.body.style.fontFamily = "Comic Sans MS"
             }
             else {
