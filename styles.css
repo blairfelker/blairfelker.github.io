@@ -33,6 +33,7 @@ h2 {
 }
 .me {
     min-width: 300px;
+    max-width: 555px;
     width: 50%;
     float: left;
     border-radius: 20px;

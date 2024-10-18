@@ -9,126 +9,72 @@
     <body>
         <div class="name">
             <h2>Magic The Gathering</h2>
+            <img class="nooutline" style="width: 35%; width: 250px" src="media/mtg/cover.png">
             <div class="sub">
-                <p>Here is a collection of my Magic the Gathering decks</p>
+                <p>Here is a collection of my Magic the Gathering decks.</p>
             </div>
         </div>
         <div class="info">
             <h3>Red/Green Aggro</h3>
-                Banefire x2<br>
-                Jadelight Ranger<br>
-                Carnage Tyrant<br>
-                Rubberbelt Recluse<br>			
-                Pelt Collector<br>
-                Sparkmage Apprentice<br>			
-                Pelakka Wurm<br>
-                Elvish Rejuvenator x2<br>			
-                Raptor Hatchling x2<br>
-                Charging Monstrosaur x2<br>		
-                Draconic Disciple x3<br>
-                Druid of the Cowl x4<br>			
-                Llanowar Elves x4<br>
-                Dragonborn Champion<br>
-                Colossal Majesty x2<br>
-                Shock x2 <br>
-                Lightning Strike x4<br>
-                Goreclaw, Terror of Qal Sisma<br>
-                Ghalta, Primal Hunger<br>
-                The Tarrasque<br>
-                Vivien Reid<br>
-                Mountain x7<br>
-                Forest x11<br>
-                Timber Gorge x4
-                </p>
+            <div class="containter" id="redgreenaggrolist" style="float:left">
+
+            </div>
+            <div class="containter" style="width: 305px; float:right">
+                <img class="nooutline" id="redgreenaggroimage" src="media/mtg/Banefire.png">
+            </div>
         </div>
         <div class="info">
             <h3>Olivia, Crimson Bride Commander</h3>
-            <p>Oliva, Crimson Bride<br>
-                Molten Disaster<br>
-                Earthquake<br>
-                Sign In Blood<br>
-                Read the Bones<br>
-                Faithless Looting<br>
-                Release the Gremlins<br>
-                Cathartic Reunion<br>
-                Feed the Swarm<br>
-                Liquimetal Torque<br>
-                Ebony Fly<br>
-                Mind Stone<br>
-                Charcoal Diamond<br>
-                Mask of Avacyn<br>
-                Fractured Powerstone<br>
-                Everflowing Chalice<br>
-                Rakdos Signet<br>
-                Nevinyrral’s Disk<br>
-                Blood Fountain<br>
-                Prismatic Lens<br>	
-                Fire Diamond<br>
-                Guardian Idol<br>
-                Maskwood Nexus<br>
-                Trading Post<br>
-                Undercity Informer<br>
-                Artisan of Kozilek<br>
-                Ulamog’s Crusher<br>
-                Abhorrent Overlord<br>
-                Angrath’s Marauders<br>
-                Corpse Connoisseur<br>
-                Butcher of Malakir
-                Sepulchral Primordial<br>
-                Necropolis Regent<br>
-                Oriq Loremage<br>
-                Terror of Mount Velus<br>
-                Magus of the Wheel<br>
-                Bane of Bala Ged<br>
-                Dragon Mage<br>
-                Overseer of the Damned<br>
-                Vile Entomber<br>
-                Rakshasa Debaser<br>
-                Harvester of Souls<br>
-                Flayer of the Hatebound<br>
-                Charging Tuskodon<br>
-                Goblin Bombardment<br>
-                Magmaquake	<br>
-                Rakdos Charm<br>
-                Moonlight Bargain<br>			
-                Wall of the Nim<br>
-                Dark Bargain		<br>		
-                Undying Malice<br>
-                Feign Death<br>
-                Ruin Grinder<br>
-                Triplicate Titan<br>
-                Combustible Gearhulk<br>
-                Steel Hellkite<br>
-                Gravebreaker Lamia<br>
-                Kaervek the Merciless<br>			
-                Zargas, Thief of Heartbeats<br>
-                Go-Shintai of Hidden Cruelty	<br>	
-                Sengir, the Dark Baron<br>
-                Florian, Voldaren Scion	<br>	
-                Kazarov, Sengir Pureblood<br>
-                Etali, Primal Storm<br>
-                Geier Reach Sanitarium<br>
-                Myriad Landscape<br>
-                Ash Barrens<br>
-                Command Tower<br>
-                Exotic Orchard<br>
-                High Market<br>
-                Foreboding Ruins<br>			
-                Rakdos Carnarium<br>
-                Akoum Refuge		<br>		
-                Cinder Barrens<br>
-                Rakdos Guildgate<br>			
-                Shadowblood Ridge<br>
-                Bloodfell Caves		<br>	
-                Temple of Malice<br>
-                Swamp x16<br>
-                Mountain x6
-                </p>
+            <p>Because this is a commander deck, the list of cards goes way past the visual card. I don't have an elegant solution at the moment.</p>
+            <div class="containter" id="oliviacommanderlist" style="float:left">
+
+            </div>
+            <div class="containter" style="width: 305px; float:right">
+                <img class="nooutline" id="oliviacommanderimage" src="media/mtg/Olivia, Crimson Bride.png">
+            </div>
         </div>
     </body>
     <script>
-        function collapse(id) {
-            
+        function loadRedGreenAggro() {
+            let workingDiv = document.getElementById("redgreenaggrolist")
+            let cardList = ["Banefire",  "Jadelight Ranger",  "Carnage Tyrant",  "Rubblebelt Recluse",  "Pelt Collector",  "Sparkmage Apprentice",  "Pelakka Wurm",  "Elvish Rejuvenator",  "Raptor Hatchling",  "Charging Monstrosaur",  "Draconic Disciple",  "Druid of the Cowl",  "Llanowar Elves",  "Dragonborn Champion",  "Colossal Majesty",  "Shock",  "Lightning Strike",  "Goreclaw, Terror of Qal Sisma",  "Ghalta, Primal Hunger",  "The Tarrasque",  "Vivien Reid",  "Mountain",  "Forest",  "Timber Gorge"]
+            let amountList = [  2,  1,  1,  1,  1,  1,  1,  2,  2,  2,  3,  4,  4,  1,  2,  2,  4,  1,  1,  1,  1,  7,  11,  4]
+            let image = document.getElementById("redgreenaggroimage")
+            loadDeck(workingDiv, cardList, amountList, image)
         }
+        function loadOliviaCommander() {
+            let workingDiv = document.getElementById("oliviacommanderlist")
+            let cardList = ["Olivia, Crimson Bride",  "Molten Disaster",  "Earthquake",  "Sign In Blood",  "Read the Bones",  "Faithless Looting",  "Release the Gremlins",  "Cathartic Reunion",  "Feed the Swarm",  "Liquimetal Torque",  "Ebony Fly",  "Mind Stone",  "Charcoal Diamond",  "Mask of Avacyn",  "Fractured Powerstone",  "Everflowing Chalice",  "Rakdos Signet",  "Nevinyrral’s Disk",  "Blood Fountain",  "Prismatic Lens",  "Fire Diamond",  "Guardian Idol",  "Maskwood Nexus",  "Trading Post",  "Undercity Informer",  "Artisan of Kozilek",  "Ulamog’s Crusher",  "Abhorrent Overlord",  "Angrath’s Marauders",  "Corpse Connoisseur",  "Butcher of Malakir",  "Sepulchral Primordial",  "Necropolis Regent",  "Oriq Loremage",  "Terror of Mount Velus",  "Magus of the Wheel",  "Bane of Bala Ged",  "Dragon Mage",  "Overseer of the Damned",  "Vile Entomber",  "Rakshasa Debaser",  "Harvester of Souls",  "Flayer of the Hatebound",  "Charging Tuskodon",  "Goblin Bombardment",  "Magmaquake",  "Rakdos Charm",  "Moonlight Bargain",  "Wail of the Nim",  "Dark Bargain",  "Undying Malice",  "Feign Death",  "Ruin Grinder",  "Triplicate Titan",  "Combustible Gearhulk",  "Steel Hellkite",  "Gravebreaker Lamia",  "Kaervek the Merciless",  "Zagras, Thief of Heartbeats",  "Go-Shintai of Hidden Cruelty",  "Sengir, the Dark Baron",  "Florian, Voldaren Scion",  "Kazarov, Sengir Pureblood",  "Etali, Primal Storm",  "Geier Reach Sanitarium",  "Myriad Landscape",  "Ash Barrens",  "Command Tower",  "Exotic Orchard",  "High Market",  "Foreboding Ruins",  "Rakdos Carnarium",  "Akoum Refuge",  "Cinder Barrens",  "Rakdos Guildgate",  "Shadowblood Ridge",  "Bloodfell Caves",  "Temple of Malice",  "Swamp",  "Mountain"]
+            let amountList = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16, 6]
+            let image = document.getElementById("oliviacommanderimage")
+            loadDeck(workingDiv, cardList, amountList, image)
+        }
+        function loadDeck(workingDiv, cardList, amountList, image) {
+            for (i=0; i<cardList.length; i++) {
+                let newDiv = document.createElement('div')
+                newDiv.id = cardList[i]
+                newDiv.className = "containter"
+                newDiv.style.cursor = "default"
+                newDiv.style.display = "flex"
+                newDiv.onmouseenter = function() { 
+                    newDiv.style.color = 'white'; 
+                    image.src = "media/mtg/" + newDiv.id + ".png"
+                }
+                newDiv.onmouseleave = function() { newDiv.style.color = 'black'; }
+                if (amountList[i] == 1) {
+                    newDiv.textContent = newDiv.id + "\n"
+                }
+                else {
+                    newDiv.textContent = newDiv.id + " " + amountList[i] + "x\n"
+                }
+                workingDiv.appendChild(newDiv)
+                workingDiv.appendChild(document.createElement('br'))
+            }
+        }
+        function collapseRedGreenAggro() {
+
+        }
+        loadRedGreenAggro()
+        loadOliviaCommander()
     </script>
 </html>
